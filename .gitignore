@@ -1,0 +1,8 @@
+*~
+*.swp
+*.swo
+blockchain
+blockchain.exe
+*.o
+*.d
+data.dat
