@@ -58,17 +58,17 @@ void Block::destroy() {
 }
 
 void Block::print() {
-	string container = "********************";
+	string container = "| ********************";
 
 	cout << container << endl
-		<< "BLOCK " << this->id << endl;
+		<< "| BLOCK " << this->id << endl;
 
 	for (vector<Transaction *>::const_iterator i=this->transactions.begin(); i!=this->transactions.end(); i++) {
 		(*i)->print();
 	}
 
 	if (this->proof_of_work != "") {
-		cout << "Proof of work: " << this->proof_of_work << endl;
+		cout << "| Proof of work: " << this->proof_of_work << endl;
 	}
 
 	cout << container << endl;

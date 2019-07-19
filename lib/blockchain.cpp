@@ -142,7 +142,7 @@ void Blockchain::print() {
 		(*i)->print();
 
 		if (i != this->blocks.end() - 1) {
-			cout << endl << "     |" << endl << endl;
+			cout << "|" << endl;
 		}
 	}
 }

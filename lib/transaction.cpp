@@ -17,7 +17,7 @@ string Transaction::getSerialized() {
 }
 
 void Transaction::print() {
-	cout << "> "
+	cout << "| > "
 		<< this->sender << " -> "
 		<< this->receiver << ": "
 		<< this->amount << endl;
