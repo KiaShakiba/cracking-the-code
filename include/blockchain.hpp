@@ -11,7 +11,7 @@ class Blockchain {
 	vector<Block *> blocks;
 
 	public:
-		Blockchan();
+		Blockchain();
 
 		void addBlock(Block *);
 

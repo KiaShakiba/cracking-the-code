@@ -9,6 +9,9 @@
 
 using namespace std;
 
+Blockchain::Blockchain() {
+}
+
 void Blockchain::addBlock(Block *block) {
 	this->blocks.emplace_back(block);
 }
@@ -36,7 +39,7 @@ void Blockchain::mineLatestBlock() {
 
 	string proof_of_work = mine(latest_block->getSerialized(), previous_proof_of_work);
 
-	cout << "POW: " << proof_of_work;
+	cout << "POW: " << proof_of_work << endl;
 }
 
 void Blockchain::loadFromFile(string file_path) {
