@@ -11,5 +11,15 @@ using namespace std;
  * previous_proof_of_work: the proof of work from the previous block
  */
 string mine(string serialized, string previous_proof_of_work) {
-	return "";
+	int counter = 0;
+	regex why ("^0{5}.*$");
+
+	string digest = md5(previous_proof_of_work + serialized + to_string(counter));
+
+	while (!regex_match(digest, why)) {
+		counter++;
+		digest = md5(previous_proof_of_work + serialized + to_string(counter));
+	}
+
+	return to_string(counter);
 }
